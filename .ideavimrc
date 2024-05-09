@@ -1,23 +1,33 @@
-let mapleader = "\<Space>" 
+let mapleader = "\<Space>"
 noremap <Esc> <nop>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
 set relativenumber number
 set NERDTree
-
+set which-key
 set easymotion
 set surround
-
+set commentary
 map <leader>j <Plug>(easymotion-s)
 map <leader>J <Plug>(easymotion-f)
-map <c-n> :NERDTree<CR> 
+map <c-n> :NERDTree<CR>
 
 
 map <leader>b <Action>(ToggleBookmark)
 nnoremap <c-\> :action SplitVertically<CR>
 nnoremap <c--> :action SplitHorizontally<CR>
-nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+sethandler <c-m> a:vim
+nnoremap <c-m> :action MoveEditorToOppostieTabGroup<CR>
+
+sethandler <c-h> a:vim
+sethandler <c-l> a:vim
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
 
 nnoremap ;q :action CloseContent<CR>
 nnoremap ;e :action RecentFiles<CR>
