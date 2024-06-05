@@ -1,0 +1,28 @@
+# please note that the alacrity.toml file should be inside the ~/.config/alacritty/alacritty.toml
+
+
+import = [
+   "~/.config/alacritty/themes/gruvbox-dark.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+dimensions.columns = 133
+dimensions.lines = 40
+
+decorations = "Buttonless"
+
+opacity = 0.7
+blur = true
+
+option_as_alt = "Both"
+
+[font]
+normal.family = "FiraCode Nerd Font"
+
+offset.y = 4
+size = 11
